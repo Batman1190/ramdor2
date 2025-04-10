@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+  <!-- Logo Group -->
+  <g>
+    <!-- Rounded orange square background -->
+    <rect x="5" y="5" width="40" height="40" rx="8" ry="8" fill="#ff8c00" />
+    
+    <!-- White capital R -->
+    <text x="25" y="35" font-family="Arial, sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="white">R</text>
+  </g>
+  
+  <!-- RAMDOR text -->
+  <text x="60" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#333">RAMDOR</text>
+</svg>

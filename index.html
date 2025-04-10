@@ -1,0 +1,132 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RAMDOR - Share and discover amazing videos on ramdor.space">
+    <meta name="keywords" content="video sharing, social media, content creation, ramdor">
+    <meta property="og:title" content="RAMDOR - Your story in every frame">
+    <meta property="og:description" content="Share and discover amazing videos on ramdor.space">
+    <meta property="og:site_name" content="ramdor.space">
+    <link rel="canonical" href="https://ramdor.space">
+    <title>RAMDOR.SPACE - Your story in every frame</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <object data="logo.svg" type="image/svg+xml" class="logo-svg"></object>
+            <p class="tagline">Your story in every frame</p>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search videos..." class="search-input">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+            <button class="upload-btn"><i class="fas fa-upload"></i> Upload</button>
+            <button class="login-btn"><i class="fas fa-user"></i> Login</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li class="active"><i class="fas fa-home"></i> Home</li>
+                    <li><i class="fas fa-bolt"></i> Shorts</li>
+                    <li><i class="fas fa-fire"></i> Trending</li>
+                    <li class="login-required"><i class="fas fa-users"></i> MySpace</li>
+                    <li class="login-required"><i class="fas fa-folder"></i> Library</li>
+                    <li class="login-required"><i class="fas fa-history"></i> History</li>
+                    <li class="login-required"><i class="fas fa-clock"></i> Watch Later</li>
+                    <li class="login-required"><i class="fas fa-thumbs-up"></i> Liked Videos</li>
+                </ul>
+            </nav>
+            <div class="donation-section">
+                <p class="donation-text">Help us grow—your donation keeps us running!</p>
+                <div class="donation-images">
+                    <a href="https://buymeacoffee.com/musikalangw" target="_blank">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Crect width='100' height='50' fill='%23ff8c00' rx='5'/%3E%3Ctext x='50' y='30' text-anchor='middle' fill='white' font-family='Arial'%3EDonate%3C/text%3E%3C/svg%3E" alt="Donate" class="donation-img">
+                    </a>
+                    <a href="https://mytube.space" target="_blank">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 50'%3E%3Crect width='100' height='50' fill='%23ff0000' rx='5'/%3E%3Ctext x='50' y='30' text-anchor='middle' fill='white' font-family='Arial'%3EMovies%3C/text%3E%3C/svg%3E" alt="Movies" class="donation-img">
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="video-grid" id="videoGrid">
+                <!-- Video items will be dynamically loaded here -->
+            </div>
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Mobile Navigation Bar -->
+    <nav class="mobile-nav">
+        <div class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-plus-circle"></i>
+            <span>Create</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-folder"></i>
+            <span>Library</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-user"></i>
+            <span>Profile</span>
+        </div>
+    </nav>
+
+    <!-- Video Player Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <div class="video-player-container">
+                <video id="videoPlayer" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-controls">
+                    <button class="like-btn"><i class="fas fa-thumbs-up"></i> Like</button>
+                    <button class="dislike-btn"><i class="fas fa-thumbs-down"></i> Dislike</button>
+                    <button class="share-btn"><i class="fas fa-share"></i> Share</button>
+                </div>
+            </div>
+            <div class="video-details">
+                <h2 class="video-title"></h2>
+                <div class="video-meta">
+                    <span class="views"></span>
+                    <span class="date"></span>
+                </div>
+                <div class="channel-info">
+                    <img class="channel-avatar" src="" alt="Channel Avatar">
+                    <div class="channel-details">
+                        <h3 class="channel-name"></h3>
+                        <button class="subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+                <div class="video-description"></div>
+            </div>
+            <div class="suggested-videos">
+                <h3>Suggested Videos</h3>
+                <div class="suggested-grid" id="suggestedVideos">
+                    <!-- Suggested videos will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
